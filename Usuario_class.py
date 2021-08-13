@@ -74,9 +74,9 @@ class Lista_de_usuarios:
     
 
     def add_usuario(self, usuario): # Adiciona os usuários na lista
-       self.__lista_de_usuarios.append(usuario.__dict__)
+       self.__lista_de_usuarios.append(usuario)
+    
 
-
-    @property # Getter da lista
-    def lista_de_usuarios(self):
-        return self.__lista_de_usuarios
+    def imprime_usuarios(self):
+        for usuario in self.__lista_de_usuarios: # Imprime todos os usuários cadastrados
+            print(f'{self.__lista_de_usuarios.index(usuario)+1} - Nome: {usuario.nome} CPF: {usuario.cpf} Email: {usuario.email} Número do celular: {usuario.numero_de_celular}')
