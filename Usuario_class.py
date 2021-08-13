@@ -78,5 +78,5 @@ class Lista_de_usuarios:
 
 
     @property # Getter da lista
-    def listagem_de_usuarios(self):
+    def lista_de_usuarios(self):
         return self.__lista_de_usuarios
