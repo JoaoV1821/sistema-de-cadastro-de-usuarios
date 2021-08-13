@@ -26,6 +26,6 @@ while True: # Looping infinito
             break # Se não, irá encerrar o looping
 
 print('-'*45)
-for usuario in listagem_usuarios: # Imprime todos os usuários cadastrados
+for usuario in listagem_usuarios.listagem_de_usuarios.lista_de_usuarios: # Imprime todos os usuários cadastrados
     print(usuario)
 print('-'*45)
