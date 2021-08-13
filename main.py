@@ -1,6 +1,7 @@
 from Usuario_class import * # Importa o módulo com as classes
+from os import system # Função que digita comandos no terminal do windows
 
-listagem_usuarios = Lista_de_usuarios() # Instancia um objeto do tipo "Lista_de_usuarios"
+lista_usuarios = Lista_de_usuarios() # Instancia um objeto do tipo "Lista_de_usuarios"
 
 while True: # Looping infinito
     try:
@@ -11,7 +12,7 @@ while True: # Looping infinito
 
         usuario = Usuario(nome, cpf, email, numero_de_celular) # Instancia um objeto do tipo "Usuario"
 
-        listagem_usuarios.add_usuario(usuario) # Faz a listagem dos usuários
+        lista_usuarios.add_usuario(usuario) # Faz a listagem dos usuários
 
 
     except Exception as E: # Captura as exceções
@@ -25,7 +26,8 @@ while True: # Looping infinito
         else:
             break # Se não, irá encerrar o looping
 
-print('-'*45)
-for usuario in listagem_usuarios.listagem_de_usuarios.lista_de_usuarios: # Imprime todos os usuários cadastrados
-    print(usuario)
-print('-'*45)
+system('cls') # limpa o terminal
+
+print('-'*120)
+lista_usuarios.imprime_usuarios() # Imprime a lista de usuários
+print('-'*120)
